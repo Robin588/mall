@@ -62,8 +62,8 @@ public class UmsAdminCacheServiceImpl implements UmsAdminCacheService {
         List<UmsAdminRoleRelation> relationList = adminRoleRelationMapper.selectByExample(example);
         if (CollUtil.isNotEmpty(relationList)) {
             String keyPrefix = REDIS_DATABASE + ":" + REDIS_KEY_RESOURCE_LIST + ":";
-            List<String> keys = relationList.stream().map(relation -> keyPrefix + relation.getAdminId()).collect(Collectors.toList());
-            redisService.del(keys);
+//            List<String> keys = relationList.().map(relation -> keyPrefix + relation.getAdminId()).collect(Collectors.toList());
+//            redisService.del(keys);
         }
     }
 
